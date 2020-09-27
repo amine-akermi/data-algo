@@ -1,0 +1,30 @@
+ALGORITHM data
+VAR
+   t1,t2,t3:Tab
+   i,j,S:entier
+   n,m:entier : taille de t1 et t2
+   existe:BOOLEAN 
+BEGIN
+    write("donner la taille de t1")
+    read("n")
+    write("donner la taille de t2")
+    read("m")
+    FOR i FROM 1 TO n   DO
+        write("donner un entier")
+        read("t1[i]")
+    END_FOR
+    FOR j FROM 1 TO m   DO
+        write("donner un entier")
+        read("t2[j]")
+    END_FOR
+    FOR i FROM 1 TO n  DO
+        existe:=false
+    END_FOR
+FOR j FROM 1 TO m IF (t1[i]=t2[j]) THEN
+    existe := true
+END_IF
+END_FOR
+IF (existe:=false) THEN
+   s:=s+t1[j]
+END_IF
+END
